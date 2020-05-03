@@ -61,6 +61,7 @@ Tree 20.04.26 ~
     File 구분
         Binary Tree //저장 규칙이 없는, 순회와 노드 개수, 총 높이만 잴 수 있음
         Thread Binary Tree //미완,미구현
+        Binary Search Tree //저장방식 O, 삽입,삭제 연산 O, 탐색 O,순환 또는 반복 구분 O
     자세한 내용
         종류
             Binary Tree
