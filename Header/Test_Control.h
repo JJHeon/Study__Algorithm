@@ -34,5 +34,5 @@ ToInteger.c
 #define ___BINARY_TREE 0
 #define ___THREAD_BINARY_TREE 0
 #define ___BINARY_SEARCH_TREE 0
-
+#define ___HEAP 1
 #endif

@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 
 /*
 다음은 함수 사용의 예제 
@@ -541,7 +541,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___THREAD_BINARY_TREE
-#include "Thread_Binary_Tree.h"|
+#include "Thread_Binary_Tree.h" |
     //Thread_Binary_Tree
     /*
             15
@@ -623,7 +623,43 @@ int main(int argc, char *argv[]) {
         BST__FreeMemoryUsingPostorder(bst_sample1);
     }
 #endif
+#if ___HEAP
+#include "Heap.h"
+    //Heap
+    /*
+            9
+        7          6
+    5      4     2       1
+  2   1  3         
+    */
+    LineMaker();
+    printf("Heap\n");
+    Heap_ sample1;
+    InitHeap(&sample1);
+    InsertMaxHeap(&sample1, CreateNode(9));
+    InsertMaxHeap(&sample1, CreateNode(7));
+    InsertMaxHeap(&sample1, CreateNode(6));
+    InsertMaxHeap(&sample1, CreateNode(5));
+    InsertMaxHeap(&sample1, CreateNode(4));
+    InsertMaxHeap(&sample1, CreateNode(2));
+    InsertMaxHeap(&sample1, CreateNode(1));
+    InsertMaxHeap(&sample1, CreateNode(2));
+    InsertMaxHeap(&sample1, CreateNode(1));
+    InsertMaxHeap(&sample1, CreateNode(3));
 
+    PrintHeap(&sample1);
+    printf("\nDelete Test\n");
+    printf("1 : %d\n", DeleteMaxHeap(&sample1).key);
+    PrintHeap(&sample1);
+    printf("2 : %d\n", DeleteMaxHeap(&sample1).key);
+    PrintHeap(&sample1);
+    printf("3 : %d\n", DeleteMaxHeap(&sample1).key);
+    PrintHeap(&sample1);
+
+    printf("Sorting Test\n");
+    Node_ A[50];
+
+#endif
 
     return 0;
 }
