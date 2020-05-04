@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___POLYNOMIAL_EXPRESSION1
 #include "Polynomial_Expression.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,7 +43,9 @@ void PEE1__Print(PEE1 A) {
     }
     printf("\n");
 }
+#endif
 
+#if ___POLYNOMIAL_EXPRESSION2
 /*
 Polynomial Expression 2
 다항식의 표현방법 #2
@@ -51,6 +55,9 @@ Polynomial Expression 2
 
 배열 하나에 여러 다항식이 공존할 수 있고 각 다항식의 범위는 As,Ae 같은 변수로 지정되있다. 
 */
+#include "Polynomial_Expression.h"
+#include <stdio.h>
+#include <stdlib.h>
 char PEE2__CompareWithExpon(int A, int B) {
     if (A > B)
         return '>';
@@ -106,3 +113,4 @@ void PEE2__Print(PEE2 *terms, int *avail) {
     }
     printf("\n");
 }
+#endif

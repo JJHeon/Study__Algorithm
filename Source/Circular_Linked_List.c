@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___CIRCULAR_LINKED_LIST
+
 #include "Circular_Linked_List.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -72,3 +75,4 @@ void LC__Insert(LC_Node** phead, LC_Node* pre, LC_Node* new_node) {
         pre->link = new_node;
     }
 }
+#endif

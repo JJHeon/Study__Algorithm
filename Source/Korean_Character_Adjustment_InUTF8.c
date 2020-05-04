@@ -1,3 +1,7 @@
+#include "Test_Control.h"
+
+#if ___KOREAN_CHARACTER_ADJUSTMENT
+
 #include "Korean_Character_Adjustment_InUTF8.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,3 +34,4 @@ void KoreanAdjInUTF8Print(int num) {
         printf(" ");
     }
 }
+#endif

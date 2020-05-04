@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___INVOLUTION_OR_POWER
 #include "Power.h"
 /*
 Involution or Power (거듭 제곱법) 
@@ -20,3 +22,4 @@ double Power_C(double eq, int n) {
     else
         return eq * Power_C(eq * eq, (n - 1) / 2);
 }
+#endif

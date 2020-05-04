@@ -1,4 +1,3 @@
-
 #ifndef __SINGLY_LINKED_LIST_H_
 #define __SINGLY_LINKED_LIST_H_
 /*

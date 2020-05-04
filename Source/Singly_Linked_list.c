@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___SINGLY_LINKED_LIST
+
 #include "Singly_Linked_List.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -89,3 +92,4 @@ void LS__MemoryFree(LS_Node *head) {
         temp2 = temp1;
     }
 }
+#endif

@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___THREAD_BINARY_TREE
+
 #include "Thread_Binary_Tree.h"
 #include <stdio.h>
 
@@ -22,3 +25,4 @@ void TBT__InorderThread(Thread_Binary_Tree_Node_* obj){
         temp = TBT__Findsuccessor(temp); //후속자 함수 호출
     } while (temp);
 }
+#endif

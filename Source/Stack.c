@@ -1,10 +1,12 @@
+#include "Test_Control.h"
+
+#if ___STACK_USING_ARRAY
+//UAStack
 #include "Stack.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-//UAStack
 bool UAStack__IsFull(UAStack_* obj) {
     return (obj->top == MAX_UASTACK_SIZE);
 }
@@ -46,9 +48,15 @@ UAStack_Element UAStack__Peek(UAStack_* obj) {
     }
     return obj->array[obj->top];
 }
+#endif
 
+#if ___STACK_USING_LIST
 //ULStack
-
+#include "Stack.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 bool ULStack__IsEmpty(ULStack_* obj) {
     if (obj == NULL)
         return true;
@@ -101,3 +109,4 @@ void ULStack__MemoryFree(ULStack_* obj) {
         obj = temp1;
     }
 }
+#endif

@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___BINARY_TREE
+
 #include "Binary_Tree.h"
 #include "Math.h"
 
@@ -158,3 +161,4 @@ int BTN__GetHeight(Binary_Tree_Node_* node){
     }
     return height;
 }
+#endif

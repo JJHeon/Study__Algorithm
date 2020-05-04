@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___FIBONACCI_NUMBERS
 #include "Fibonacci.h"
 /*
 Fibonacci Numbers
@@ -26,3 +28,4 @@ int FibonacciNumbers_R(int n) {
         return current;
     }
 }
+#endif

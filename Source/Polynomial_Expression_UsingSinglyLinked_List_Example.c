@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___POLYNOMIAL_EXPRESSION_EXAMPLE
+
 #include "Polynomial_Expression_UsingSinglyLinked_List_Example.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -110,3 +113,4 @@ PELSE_Node_Adminster PELSE__Add(PELSE_Node_Adminster list1, PELSE_Node_Adminster
 
     return result;
 }
+#endif

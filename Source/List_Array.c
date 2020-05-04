@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___LIST_MADE_BY_ARRAY
 #include "List_Array.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -42,3 +44,4 @@ void LA__Display(LA_ *A) {
     }
     printf("\n");
 }
+#endif

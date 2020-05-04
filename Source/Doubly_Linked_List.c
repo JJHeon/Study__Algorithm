@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___DOUBLY_LINKED_LIST
+
 #include "Doubly_Linked_List.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,3 +54,4 @@ void LD__Insert(LD_Node** phead, LD_Node* pre, LD_Node* new_node) {
         pre->next = new_node;
     }
 }
+#endif

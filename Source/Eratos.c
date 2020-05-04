@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___ERATOSTENES
 #include "Eratos.h"
 #include <stdbool.h>
 #include <stdio.h>
@@ -35,3 +37,4 @@ bool* Eratos(int n) {
     }
     return PrimeArray;
 }
+#endif

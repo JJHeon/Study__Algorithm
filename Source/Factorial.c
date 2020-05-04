@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___FACTORIAL
 #include "Factorial.h"
 /*
 Factorial
@@ -23,3 +25,4 @@ int Factorial_R(int n) {
     }
     return result;
 }
+#endif

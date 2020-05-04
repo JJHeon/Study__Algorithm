@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___HANOI_TOWER
 #include "HanoiTower.h"
 #include <stdio.h>
 /*
@@ -35,3 +37,4 @@ void HanoiTower_C(int n, char from, char temp, char to) {
         HanoiTower_C(n - 1, temp, from, to);
     }
 }
+#endif

@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___DEQUEUE_USING_DOUBLY_LINKED_LIST
+
 #include "Deque.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -128,3 +131,4 @@ Deque_Element Deque__DeleteRear(Deque_* obj) {
         return temp;
     }
 }
+#endif

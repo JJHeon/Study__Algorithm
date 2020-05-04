@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___SPARSE_MATRIX_EXPRESSION
+
 #include "SparseMatrix.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -64,3 +67,4 @@ void SME1__Print(SME1 *A) {
         printf("\n");
     }
 }
+#endif

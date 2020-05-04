@@ -1,24 +1,4 @@
-//add
-#include "Binary_Search_Tree.h"
-#include "Binary_Tree.h"
-#include "Circular_Linked_List.h"
-#include "Deque.h"
-#include "Doubly_Linked_List.h"
-#include "Eratos.h"
-#include "Factorial.h"
-#include "Fibonacci.h"
-#include "HanoiTower.h"
-#include "Korean_Character_Adjustment_InUTF8.h"
-#include "List_Array.h"
-#include "Polynomial_Expression.h"
-#include "Polynomial_Expression_UsingSinglyLinked_List_Example.h"
-#include "Power.h"
-#include "Queue.h"
-#include "Singly_Linked_List.h"
-#include "SparseMatrix.h"
-#include "Stack.h"
-#include "Stack_Example.h"
-#include "Thread_Binary_Tree.h"
+#include "Test_Control.h"
 //std
 #include <math.h>
 #include <stdbool.h>
@@ -26,32 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define ___ERATOSTENES 0
-#define ___FACTORIAL 0
-#define ___INVOLUTION_OR_POWER 0
-#define ___FIBONACCI_NUMBERS 0
-#define ___HANOI_TOWER 0
-#define ___POLYNOMIAL_EXPRESSION1 0
-#define ___POLYNOMIAL_EXPRESSION2 0
-#define ___SPARSE_MATRIX_EXPRESSION 0
-#define ___LIST_MADE_BY_ARRAY 0
-#define ___SINGLY_LINKED_LIST 0
-#define ___CIRCULAR_LINKED_LIST 0
-#define ___DOUBLY_LINKED_LIST 0
-#define ___POLYNOMIAL_EXPRESSION_EXAMPLE 0
-#define ___STACK_USING_ARRAY 0
-#define ___STACK_USING_LIST 0
-#define ___STACK_EXAMPLE1 0
-#define ___STACK_EXAMPLE2 0
-#define ___STACK_EXAMPLE5 0
-#define ___STACK_EXAMPLE6 0
-#define ___KOREAN_CHARACTER_ADJUSTMENT 0
-#define ___QUEUE_USING_ARRAY 0
-#define ___QUEUE_USING_LIST 0
-#define ___DEQUEUE_USING_DOUBLY_LINKED_LIST 0
-#define ___BINARY_TREE 0
-#define ___THREAD_BINARY_TREE 0
-#define ___BINARY_SEARCH_TREE 0
+
 /*
 다음은 함수 사용의 예제 
 */
@@ -63,6 +18,7 @@ void LineMaker(void) {
 
 int main(int argc, char *argv[]) {
 #if ___ERATOSTENES
+#include "Eratos.h"
     //Eratostenes
     LineMaker();
     printf("Eratostenes\n");
@@ -81,6 +37,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___FACTORIAL
+#include "Factorial.h"
     //Factorial
     LineMaker();
     printf("Factorial\n");
@@ -91,6 +48,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___INVOLUTION_OR_POWER
+#include "Power.h"
     //Involution or Power (거듭제곱 법)
     LineMaker();
     printf("Involution or Power\n");
@@ -101,6 +59,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___FIBONACCI_NUMBERS
+#include "Fibonacci.h"
     //Fibonacci numbers
     LineMaker();
     printf("Fibonacci numbers\n");
@@ -111,6 +70,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___HANOI_TOWER
+#include "HanoiTower.h"
     //Hanoi Tower
     LineMaker();
     printf("Hanoi Tower\n");
@@ -119,6 +79,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___POLYNOMIAL_EXPRESSION1
+#include "Polynomial_Expression.h"
     //Polynomial Expression 1
     LineMaker();
     printf("Polynomial Expression 1\n");
@@ -131,6 +92,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___POLYNOMIAL_EXPRESSION2
+#include "Polynomial_Expression.h"
     //Polynomial Expression 2
     LineMaker();
     printf("Polynomial Expression 2\n");
@@ -143,6 +105,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___SPARSE_MATRIX_EXPRESSION
+#include "SparseMatrix.h"
     //Sparse Matrix Expression
     LineMaker();
     printf("Sparse Matrix Expression\n");
@@ -157,6 +120,8 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___LIST_MADE_BY_ARRAY
+#include "List_Array.h"
+
     //List made by Array
     LineMaker();
     printf("List made by Array\n");
@@ -170,6 +135,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___SINGLY_LINKED_LIST
+#include "Singly_Linked_List.h"
     //Singly Linked List
     LineMaker();
     printf("Singly Linked List\n");
@@ -200,6 +166,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___CIRCULAR_LINKED_LIST
+#include "Circular_Linked_List.h"
     //Circular Linked List
     LineMaker();
     printf("Circular Linked List\n");
@@ -214,6 +181,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___DOUBLY_LINKED_LIST
+#include "Doubly_Linked_List.h"
     //Doubly Linked List
     LineMaker();
     printf("Doubly Linked List\n");
@@ -230,6 +198,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___POLYNOMIAL_EXPRESSION_EXAMPLE
+#include "Polynomial_Expression_UsingSinglyLinked_List_Example.h"
     //Polynomial_Expression_UsingSinglyLinked_List_Example
     LineMaker();
     printf("Polynomial_Expression_UsingSinglyLinked_List_Example\n");
@@ -260,6 +229,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___STACK_USING_ARRAY
+#include "Stack.h"
     //Stack Using Array
     LineMaker();
     printf("Stack Using Array\n");
@@ -286,6 +256,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___STACK_USING_LIST
+#include "Stack.h"
     //Stack Using List
     LineMaker();
     printf("Stack Using List\n");
@@ -311,7 +282,8 @@ int main(int argc, char *argv[]) {
         ULStack__MemoryFree(ulstack_exmple1);
     }
 #endif
-#if ___STACK_EXAMPLE1
+#if ___STACK_EXAMPLE
+#include "Stack_Example.h"
     //Stack Example 1
     LineMaker();
     printf("Stack Example 1\n");
@@ -327,8 +299,7 @@ int main(int argc, char *argv[]) {
         else
             printf("Sentence has problem\n");
     }
-#endif
-#if ___STACK_EXAMPLE2
+
     //Stack Example 2
     LineMaker();
     printf("Stack Example 2\n");
@@ -355,9 +326,6 @@ int main(int argc, char *argv[]) {
         free(stack_exmple3);
         free(stack_exmple4);
     }
-#endif
-#if ___STACK_EXAMPLE5
-    //Stack Example 5
     LineMaker();
     printf("Stack Example 5\n");
     {
@@ -409,9 +377,7 @@ int main(int argc, char *argv[]) {
         EX3Stack__MemoryFree(stack_example6_pass);
         EX3Stack__MemoryFree(stack_example7_pass);
     }
-#endif
 
-#if ___STACK_EXAMPLE6
     //Stack Example 6 //책 예제 그대로 실음
     LineMaker();
     printf("Stack Example 6\n");
@@ -449,6 +415,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___KOREAN_CHARACTER_ADJUSTMENT
+#include "Korean_Character_Adjustment_InUTF8.h"
     //Korean character adjustment (한글 문자배열 조정) in UTF-8
     LineMaker();
     printf("Korean character adjustment\n");
@@ -474,6 +441,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___QUEUE_USING_ARRAY
+#include "Queue.h"
     //Queue Using Array
     LineMaker();
     printf("Queue Using Array\n");
@@ -492,6 +460,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___QUEUE_USING_LIST
+#include "Queue.h"
     //Queue Using List
     LineMaker();
     printf("Queue Using List\n");
@@ -511,6 +480,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___DEQUEUE_USING_DOUBLY_LINKED_LIST
+#include "Deque.h"
     //Dequeue Using Doubly_Linked_List
     LineMaker();
     printf("Dequeue Using Doubly_Linked_List\n");
@@ -534,6 +504,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___BINARY_TREE
+#include "Binary_Tree.h"
     //Binary_Tree
     /*
             15
@@ -570,6 +541,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___THREAD_BINARY_TREE
+#include "Thread_Binary_Tree.h"|
     //Thread_Binary_Tree
     /*
             15
@@ -603,6 +575,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 #if ___BINARY_SEARCH_TREE
+#include "Binary_Search_Tree.h"
     //Binary_Search_Tree
     /*
             30

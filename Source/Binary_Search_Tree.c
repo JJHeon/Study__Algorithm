@@ -1,3 +1,5 @@
+#include "Test_Control.h"
+#if ___BINARY_SEARCH_TREE
 #include "Binary_Search_Tree.h"
 //BST 중위순회 일반 이진트리의 중위순회와 같음
 void BST__Inorder(Binary_Search_Tree_Node_* root) {
@@ -210,3 +212,4 @@ void BST__FreeMemoryUsingPostorder(Binary_Search_Tree_Node_* root) {
         free(root);
     }
 }
+#endif

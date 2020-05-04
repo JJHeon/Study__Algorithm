@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___QUEUE_USING_ARRAY
+
 #include "Queue.h"
 #include <stdbool.h>
 #include <stdio.h>
@@ -44,6 +47,16 @@ UAQeue_Element UAQueue__CreateElement(int data_1) {
     UAQeue_Element temp = {data_1};
     return temp;
 }
+
+#endif
+
+
+#if ___QUEUE_USING_LIST
+#include "Queue.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 bool ULQueue__IsEmpty(ULQueue_* obj) {
     return (obj->front == NULL && obj->rear == NULL);
@@ -122,3 +135,4 @@ ULQueue_Node_* ULQueue__CreateNode(int data_1) {
     obj->link = NULL;
     return obj;
 }
+#endif

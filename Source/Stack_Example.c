@@ -1,11 +1,12 @@
+#include "Test_Control.h"
+#if ___STACK_EXAMPLE
+//EX1
 #include "Stack_Example.h"
 #include "ToInteger.h"
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-//EX1
 bool EXStack__IsEmpty(EXStack_* obj) {
     if (obj == NULL)
         return true;
@@ -215,6 +216,12 @@ int EXStack__OperatorProirity(char obj) {
 }
 
 //EX2
+#include "Stack_Example.h"
+#include "ToInteger.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 bool EX2Stack__IsEmpty(EX2Stack_* obj) {
     if (obj == NULL)
         return true;
@@ -324,6 +331,12 @@ int EX2Stack__CaclulatePostfixNotation(char* string) {
 }
 
 //EX3
+#include "Stack_Example.h"
+#include "ToInteger.h"
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 bool EX3Stack__IsEmpty(EX3Stack_* obj) {
     if (obj == NULL)
         return true;
@@ -579,3 +592,4 @@ void EX3AStack__push_Loc(EX3AStack_Type* s, int r, int c,char (*maze)[EX3ASTACK_
         EX3AStack__push(s, tmp);
     }
 }
+#endif
