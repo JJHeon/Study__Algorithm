@@ -24,6 +24,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#define ___ERATOSTENES 0
+#define ___FACTORIAL 0
+#define ___INVOLUTION_OR_POWER 0
+#define ___FIBONACCI_NUMBERS 0
+#define ___HANOI_TOWER 0
+#define ___POLYNOMIAL_EXPRESSION1 0
+#define ___POLYNOMIAL_EXPRESSION2 0
+#define ___SPARSE_MATRIX_EXPRESSION 0
+#define ___LIST_MADE_BY_ARRAY 0
+#define ___SINGLY_LINKED_LIST 0
+#define ___CIRCULAR_LINKED_LIST 0
+#define ___DOUBLY_LINKED_LIST 0
+#define ___POLYNOMIAL_EXPRESSION_EXAMPLE 0
+#define ___STACK_USING_ARRAY 0
+#define ___STACK_USING_LIST 0
+#define ___STACK_EXAMPLE1 0
+#define ___STACK_EXAMPLE2 0
+#define ___STACK_EXAMPLE5 0
+#define ___STACK_EXAMPLE6 0
+#define ___KOREAN_CHARACTER_ADJUSTMENT 0
+#define ___QUEUE_USING_ARRAY 0
+#define ___QUEUE_USING_LIST 0
+#define ___DEQUEUE_USING_DOUBLY_LINKED_LIST 0
+#define ___BINARY_TREE 0
+#define ___THREAD_BINARY_TREE 0
+#define ___BINARY_SEARCH_TREE 1
 /*
 다음은 함수 사용의 예제 
 */
@@ -34,6 +61,8 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
+#if ___ERATOSTENES
+    //Eratostenes
     LineMaker();
     printf("Eratostenes\n");
     {
@@ -49,6 +78,8 @@ int main(int argc, char *argv[]) {
 
         free(eratostenes_ptr);
     }
+#endif
+#if ___FACTORIAL
     //Factorial
     LineMaker();
     printf("Factorial\n");
@@ -57,6 +88,8 @@ int main(int argc, char *argv[]) {
         printf("Factorial_C : %d\n", Factorial_C(factorial_int));
         printf("Factorial_R : %d\n", Factorial_R(factorial_int));
     }
+#endif
+#if ___INVOLUTION_OR_POWER
     //Involution or Power (거듭제곱 법)
     LineMaker();
     printf("Involution or Power\n");
@@ -65,6 +98,8 @@ int main(int argc, char *argv[]) {
         printf("Power_C_JH : %.3lf\n", Power_R(involution_double, 3));
         printf("Power_R_JH : %.3lf\n", Power_R(involution_double, 3));
     }
+#endif
+#if ___FIBONACCI_NUMBERS
     //Fibonacci numbers
     LineMaker();
     printf("Fibonacci numbers\n");
@@ -73,12 +108,16 @@ int main(int argc, char *argv[]) {
         printf("FibonacciNumbers_C_JH : %d\n", FibonacciNumbers_C(6));
         printf("FibonacciNumbers_R_JH : %d\n", FibonacciNumbers_R(6));
     }
+#endif
+#if ___HANOI_TOWER
     //Hanoi Tower
     LineMaker();
     printf("Hanoi Tower\n");
     {
         HanoiTower_C(4, 'A', 'B', 'C');
     }
+#endif
+#if ___POLYNOMIAL_EXPRESSION1
     //Polynomial Expression 1
     LineMaker();
     printf("Polynomial Expression 1\n");
@@ -89,6 +128,8 @@ int main(int argc, char *argv[]) {
 
         PEE1__Print(polynomial_expr1_exmple3);
     }
+#endif
+#if ___POLYNOMIAL_EXPRESSION2
     //Polynomial Expression 2
     LineMaker();
     printf("Polynomial Expression 2\n");
@@ -99,6 +140,8 @@ int main(int argc, char *argv[]) {
         PEE2__Add(terms, &avail, 0, 2, 3, 5, &Cs, &Ce);
         PEE2__Print(terms, &avail);
     }
+#endif
+#if ___SPARSE_MATRIX_EXPRESSION
     //Sparse Matrix Expression
     LineMaker();
     printf("Sparse Matrix Expression\n");
@@ -111,6 +154,8 @@ int main(int argc, char *argv[]) {
         SME1__Print(&sparse_matrix_expr1_exmple2);
         SME1__Print(&sparse_matrix_expr1_exmple3);
     }
+#endif
+#if ___LIST_MADE_BY_ARRAY
     //List made by Array
     LineMaker();
     printf("List made by Array\n");
@@ -122,6 +167,8 @@ int main(int argc, char *argv[]) {
         LA__Add(&list_array_exmple1, 0, 30);
         LA__Display(&list_array_exmple1);
     }
+#endif
+#if ___SINGLY_LINKED_LIST
     //Singly Linked List
     LineMaker();
     printf("Singly Linked List\n");
@@ -150,6 +197,8 @@ int main(int argc, char *argv[]) {
         LS__Display(singly_linked_list_exmple3);
         LS__MemoryFree(singly_linked_list_exmple3);
     }
+#endif
+#if ___CIRCULAR_LINKED_LIST
     //Circular Linked List
     LineMaker();
     printf("Circular Linked List\n");
@@ -162,6 +211,8 @@ int main(int argc, char *argv[]) {
         LC__Display(circular_linked_list_exmple);
         LC__MemoryFree(circular_linked_list_exmple);
     }
+#endif
+#if ___DOUBLY_LINKED_LIST
     //Doubly Linked List
     LineMaker();
     printf("Doubly Linked List\n");
@@ -176,6 +227,8 @@ int main(int argc, char *argv[]) {
         LD__Display(doubly_linked_list_exmple);
         LD__MemoryFree(doubly_linked_list_exmple);
     }
+#endif
+#if ___POLYNOMIAL_EXPRESSION_EXAMPLE
     //Polynomial_Expression_UsingSinglyLinked_List_Example
     LineMaker();
     printf("Polynomial_Expression_UsingSinglyLinked_List_Example\n");
@@ -204,6 +257,8 @@ int main(int argc, char *argv[]) {
         PELSE__MemoryFree(&pelse_exmple2);
         PELSE__MemoryFree(&pelse_exmple3);
     }
+#endif
+#if ___STACK_USING_ARRAY
     //Stack Using Array
     LineMaker();
     printf("Stack Using Array\n");
@@ -228,6 +283,8 @@ int main(int argc, char *argv[]) {
         printf("%d\n", uastack_sample.data);
         printf("IsEmpty : %d\n", UAStack__IsEmpty(&uastack_exmple1));
     }
+#endif
+#if ___STACK_USING_LIST
     //Stack Using List
     LineMaker();
     printf("Stack Using List\n");
@@ -252,6 +309,8 @@ int main(int argc, char *argv[]) {
         printf("IsEmpty : %d\n", ULStack__IsEmpty(ulstack_exmple1));
         ULStack__MemoryFree(ulstack_exmple1);
     }
+#endif
+#if ___STACK_EXAMPLE1
     //Stack Example 1
     LineMaker();
     printf("Stack Example 1\n");
@@ -267,6 +326,8 @@ int main(int argc, char *argv[]) {
         else
             printf("Sentence has problem\n");
     }
+#endif
+#if ___STACK_EXAMPLE2
     //Stack Example 2
     LineMaker();
     printf("Stack Example 2\n");
@@ -293,6 +354,8 @@ int main(int argc, char *argv[]) {
         free(stack_exmple3);
         free(stack_exmple4);
     }
+#endif
+#if ___STACK_EXAMPLE5
     //Stack Example 5
     LineMaker();
     printf("Stack Example 5\n");
@@ -345,6 +408,9 @@ int main(int argc, char *argv[]) {
         EX3Stack__MemoryFree(stack_example6_pass);
         EX3Stack__MemoryFree(stack_example7_pass);
     }
+#endif
+
+#if ___STACK_EXAMPLE6
     //Stack Example 6 //책 예제 그대로 실음
     LineMaker();
     printf("Stack Example 6\n");
@@ -380,6 +446,8 @@ int main(int argc, char *argv[]) {
         }
         printf("success\n");
     }
+#endif
+#if ___KOREAN_CHARACTER_ADJUSTMENT
     //Korean character adjustment (한글 문자배열 조정) in UTF-8
     LineMaker();
     printf("Korean character adjustment\n");
@@ -403,6 +471,8 @@ int main(int argc, char *argv[]) {
         KoreanAdjInUTF8Print(KoreanAdjInUTF8Count("엄마는외계인"));
         printf("%6d", 6000);
     }
+#endif
+#if ___QUEUE_USING_ARRAY
     //Queue Using Array
     LineMaker();
     printf("Queue Using Array\n");
@@ -419,6 +489,8 @@ int main(int argc, char *argv[]) {
         }
         //printf("Peek : %d\n", UAQueue__Peek(&queue_example1).data);
     }
+#endif
+#if ___QUEUE_USING_LIST
     //Queue Using List
     LineMaker();
     printf("Queue Using List\n");
@@ -436,6 +508,8 @@ int main(int argc, char *argv[]) {
         printf("Peek : %d\n", ULQueue__Peek(&queue_example2).data1);
         ULQueue__Destructor(&queue_example2);
     }
+#endif
+#if ___DEQUEUE_USING_DOUBLY_LINKED_LIST
     //Dequeue Using Doubly_Linked_List
     LineMaker();
     printf("Dequeue Using Doubly_Linked_List\n");
@@ -457,6 +531,8 @@ int main(int argc, char *argv[]) {
         Deque__Destructor(&deque_example1);
         printf("Deque__IsEmpty : %d\n", Deque__IsEmpty(&deque_example1));
     }
+#endif
+#if ___BINARY_TREE
     //Binary_Tree
     /*
             15
@@ -491,6 +567,8 @@ int main(int argc, char *argv[]) {
         printf("단말(leaf) 노드 개수 구하기 : %d\n", BTN__GetLeafNodeCount(root));
         printf("노드 Height : %d\n", BTN__GetHeight(root));
     }
+#endif
+#if ___THREAD_BINARY_TREE
     //Thread_Binary_Tree
     /*
             15
@@ -501,17 +579,16 @@ int main(int argc, char *argv[]) {
     LineMaker();
     printf("Thread_Binary_Tree\n");
     {
+        Thread_Binary_Tree_Node_ tbt_sample1_n1 = {42, true, NULL, NULL};
+        Thread_Binary_Tree_Node_ tbt_sample1_n2 = {92, true, NULL, NULL};
+        Thread_Binary_Tree_Node_ tbt_sample1_n3 = {62, false, NULL, NULL};
+        Thread_Binary_Tree_Node_ tbt_sample1_n4 = {1, true, NULL, NULL};
+        Thread_Binary_Tree_Node_ tbt_sample1_n5 = {16, false, NULL, &tbt_sample1_n1};
+        Thread_Binary_Tree_Node_ tbt_sample1_n6 = {25, false, &tbt_sample1_n2, &tbt_sample1_n3};
+        Thread_Binary_Tree_Node_ tbt_sample1_n7 = {4, true, &tbt_sample1_n4, NULL};
+        Thread_Binary_Tree_Node_ tbt_sample1_n8 = {20, false, &tbt_sample1_n5, &tbt_sample1_n6};
+        Thread_Binary_Tree_Node_ tbt_sample1_n9 = {15, false, &tbt_sample1_n7, &tbt_sample1_n8};
 
-        Thread_Binary_Tree_Node_ tbt_sample1_n1 = {42,true, NULL, NULL};
-        Thread_Binary_Tree_Node_ tbt_sample1_n2 = {92,true, NULL, NULL};
-        Thread_Binary_Tree_Node_ tbt_sample1_n3 = {62,false, NULL, NULL};
-        Thread_Binary_Tree_Node_ tbt_sample1_n4 = {1,true, NULL, NULL};
-        Thread_Binary_Tree_Node_ tbt_sample1_n5 = {16,false, NULL, &tbt_sample1_n1};
-        Thread_Binary_Tree_Node_ tbt_sample1_n6 = {25,false, &tbt_sample1_n2, &tbt_sample1_n3};
-        Thread_Binary_Tree_Node_ tbt_sample1_n7 = {4,true, &tbt_sample1_n4, NULL};
-        Thread_Binary_Tree_Node_ tbt_sample1_n8 = {20,false, &tbt_sample1_n5, &tbt_sample1_n6};
-        Thread_Binary_Tree_Node_ tbt_sample1_n9 = {15,false, &tbt_sample1_n7, &tbt_sample1_n8};
-        
         tbt_sample1_n1.right = &tbt_sample1_n8;
         tbt_sample1_n2.right = &tbt_sample1_n6;
         tbt_sample1_n4.right = &tbt_sample1_n7;
@@ -523,14 +600,19 @@ int main(int argc, char *argv[]) {
         TBT__InorderThread(root);
         printf("\n");
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+#endif
+#if ___BINARY_SEARCH_TREE
+    //Binary_Search_Tree
+    /*
+            15
+        4          20
+    1          16       25
+                 42   92    62
+    */
+    LineMaker();
+    printf("Binary_Search_Tree\n");
+    {
+    }
+#endif
     return 0;
 }
