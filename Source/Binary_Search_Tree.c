@@ -1,4 +1,12 @@
 #include "Binary_Search_Tree.h"
+//BST 중위순회 일반 이진트리의 중위순회와 같음
+void BST__Inorder(Binary_Search_Tree_Node_* root) {
+    if (root) {
+        BST__Inorder(root->left);
+        printf("%d - ", root->key);
+        BST__Inorder(root->right);
+    }
+}
 //순환적인 탐색 방법
 Binary_Search_Tree_Node_* BST__Search_C(Binary_Search_Tree_Node_* node, int key) {
     if (node == NULL) return NULL;
@@ -34,7 +42,7 @@ Binary_Search_Tree_Node_* BST__CreateNode(int key, BST_data_formet data) {
     new_node->right = NULL;
     return new_node;
 }
-void BST__InsertNode(Binary_Search_Tree_Node_** const root, Binary_Search_Tree_Node_* new_node) {
+void BST__InsertNode(Binary_Search_Tree_Node_** root, Binary_Search_Tree_Node_* new_node) {
     if (new_node == NULL) {
         printf("BST__InsertNode/ERROR\n");
         exit(1);
@@ -54,7 +62,7 @@ void BST__InsertNode(Binary_Search_Tree_Node_** const root, Binary_Search_Tree_N
     }
 
     //완전 처음, 루트노드조차 비어있는 경우
-    if (node == NULL) {
+    if (node == NULL && target == NULL) {
         (*root) = new_node;
     } else if (new_node->key < target->key) {
         target->left = new_node;
@@ -62,7 +70,7 @@ void BST__InsertNode(Binary_Search_Tree_Node_** const root, Binary_Search_Tree_N
         target->right = new_node;
     }
 }
-BST_data_formet BST__DeleteNode(Binary_Search_Tree_Node_** const root, int key) {
+BST_data_formet BST__DeleteNode(Binary_Search_Tree_Node_** root, int key) {
     Binary_Search_Tree_Node_* node = *root;
     Binary_Search_Tree_Node_* parant_node = NULL;
     Binary_Search_Tree_Node_* child_node = NULL;
@@ -72,7 +80,7 @@ BST_data_formet BST__DeleteNode(Binary_Search_Tree_Node_** const root, int key) 
     Binary_Search_Tree_Node_* right_parant_successor = NULL;
     BST_data_formet return_deleted_node_data;
 
-    while (node != NULL && key == node->key) {
+    while (node != NULL && key != node->key) {
         parant_node = node;
         node = (key < node->key) ? node->left : node->right;
     }

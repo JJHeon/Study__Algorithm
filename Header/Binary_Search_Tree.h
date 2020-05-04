@@ -1,6 +1,7 @@
 #ifndef __BINARY_SEARCH_TREE_H_
 #define __BINARY_SEARCH_TREE_H_
 #include <stdio.h>
+#include <stdlib.h>
 /*
 Binary Search Tree => BST
 
@@ -14,10 +15,13 @@ typedef struct Binary_Search_Tree_Node_ {
 } Binary_Search_Tree_Node_;
 
 Binary_Search_Tree_Node_* BST__CreateNode(int key, BST_data_formet data);
-void BST__InsertNode(Binary_Search_Tree_Node_** const root, Binary_Search_Tree_Node_* new_node);
-BST_data_formet BST__DeleteNode(Binary_Search_Tree_Node_** const root, int key);
+void BST__InsertNode(Binary_Search_Tree_Node_** root, Binary_Search_Tree_Node_* new_node);
+BST_data_formet BST__DeleteNode(Binary_Search_Tree_Node_** root, int key);
 //후위순회 방식으로 메모리 할당해제
 void BST__FreeMemoryUsingPostorder(Binary_Search_Tree_Node_* root);
+
+//BST 중위순회 일반 이진트리의 중위순회와 같음
+void BST__Inorder(Binary_Search_Tree_Node_* root);
 
 //순환적인 탐색 방법
 Binary_Search_Tree_Node_* BST__Search_C(Binary_Search_Tree_Node_* node, int key);

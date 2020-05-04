@@ -1,4 +1,5 @@
 //add
+#include "Binary_Search_Tree.h"
 #include "Binary_Tree.h"
 #include "Circular_Linked_List.h"
 #include "Deque.h"
@@ -50,7 +51,7 @@
 #define ___DEQUEUE_USING_DOUBLY_LINKED_LIST 0
 #define ___BINARY_TREE 0
 #define ___THREAD_BINARY_TREE 0
-#define ___BINARY_SEARCH_TREE 1
+#define ___BINARY_SEARCH_TREE 0
 /*
 다음은 함수 사용의 예제 
 */
@@ -604,15 +605,52 @@ int main(int argc, char *argv[]) {
 #if ___BINARY_SEARCH_TREE
     //Binary_Search_Tree
     /*
-            15
-        4          20
-    1          16       25
-                 42   92    62
+            30
+        25          39
+    12     28     32       54
+         26     31  35
     */
     LineMaker();
     printf("Binary_Search_Tree\n");
     {
+        Binary_Search_Tree_Node_ *bst_sample1 = NULL;
+        BST__InsertNode(&bst_sample1, BST__CreateNode(30, 1020));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(25, 195));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(39, 1021));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(12, 1320));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(28, 3020));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(32, 5020));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(54, 7020));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(26, 1520));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(31, 1440));
+        BST__InsertNode(&bst_sample1, BST__CreateNode(35, 3333));
+
+        printf("중위순회 : ");
+        BST__Inorder(bst_sample1);
+        printf("\n");
+
+        printf("BST__Search_C 순환 탐색 : %d : 기대값 :1520\n", BST__Search_C(bst_sample1, 26)->data);
+        printf("BST__Search_R 순환 탐색 : %d : 기대값 :5020\n", BST__Search_R(bst_sample1, 32)->data);
+
+        BST__DeleteNode(&bst_sample1, 28);
+        printf("DeleteNode 28 : ");
+        BST__Inorder(bst_sample1);
+        printf("\n");
+
+        BST__DeleteNode(&bst_sample1, 39);
+        printf("DeleteNode 39 : ");
+        BST__Inorder(bst_sample1);
+        printf("\n");
+
+        BST__DeleteNode(&bst_sample1, 30);
+        printf("DeleteNode 30 : ");
+        BST__Inorder(bst_sample1);
+        printf("\n");
+
+        BST__FreeMemoryUsingPostorder(bst_sample1);
     }
 #endif
+
+
     return 0;
 }
