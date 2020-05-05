@@ -17,6 +17,7 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
+    srand((unsigned int)time(NULL));
 #if ___ERATOSTENES
 #include "Eratos.h"
     //Eratostenes
@@ -658,6 +659,15 @@ int main(int argc, char *argv[]) {
 
     printf("Sorting Test\n");
     Node_ A[50];
+    for (int i = 0; i < 50; i++){
+        A[i].key = (rand() % 100) + 1;
+    }
+    SortHeap(A, sizeof(A) / sizeof(Node_));
+    for (int i = 0; i < 50; i++){
+        if(i%10==0)
+            printf("\n");
+        printf("%2d ", A[i].key);
+    }
 
 #endif
 
