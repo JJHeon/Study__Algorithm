@@ -102,8 +102,8 @@ Tree 20.04.26 ~
 Sorting 정렬
     기초적인 정렬
         Selection_Sort 선택 정렬 //20.05.05
-        버블 정렬
-        삽입 정렬
+        Bubble_Sort 버블 정렬   //20.05.05
+        Insert_Sort 삽입 정렬   //20.05.05
         쉘 정렬
     
     퀵 정렬

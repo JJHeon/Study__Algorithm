@@ -751,5 +751,33 @@ int main(int argc, char *argv[]) {
     }
 
 #endif
+#if ___BUBBLE_SORT
+#include "Bubble_Sort.h"
+    LineMaker();
+    printf("Bubble_Sort\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample3[50];
+    //랜덤숫자열 생성
+    for (int i = 0; i < 50; i++)
+        sample3[i].key = GenerateRandomNumber(100);
+
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample3[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    SortBubbleInAscendingOrder(sample3, sizeof(sample3) / sizeof(RecordType_));
+
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample3[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+#endif
+#if 
     return 0;
 }
