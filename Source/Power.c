@@ -1,5 +1,5 @@
 #include "Test_Control.h"
-#if (___INVOLUTION_OR_POWER||___ToInteger||___HEAP)
+#if (___INVOLUTION_OR_POWER)
 #include "Power.h"
 /*
 Involution or Power (거듭 제곱법) 

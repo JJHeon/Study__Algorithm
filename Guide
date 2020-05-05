@@ -63,6 +63,7 @@ Tree 20.04.26 ~
         Thread Binary Tree //미완,미구현
         Binary Search Tree //저장방식 O, 삽입,삭제 연산 O, 탐색 O,순환 또는 반복 구분 O
         Heap
+        Heap_Example //이산 이벤트 아이스크림 가게 시뮬레이션
     자세한 내용
         종류
             Binary Tree

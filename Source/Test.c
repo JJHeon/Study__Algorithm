@@ -659,16 +659,40 @@ int main(int argc, char *argv[]) {
 
     printf("Sorting Test\n");
     Node_ A[50];
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < 50; i++) {
         A[i].key = (rand() % 100) + 1;
     }
     SortHeap(A, sizeof(A) / sizeof(Node_));
-    for (int i = 0; i < 50; i++){
-        if(i%10==0)
+    for (int i = 0; i < 50; i++) {
+        if (i % 10 == 0)
             printf("\n");
         printf("%2d ", A[i].key);
     }
 
+#endif
+#if ___HEAP_EXAMPLE
+#include "Heap_Example.h"
+    LineMaker();
+    printf("Heap_Example\n");
+    Node_ event;
+    Heap_ heap;
+    unsigned int t = 0;
+
+    InitHeap(&heap);
+    //처음에 몇개의 초기 이벤트를 생성시킨다.
+    while (t < 5) {
+        t += random(6);
+        event.type = ARRIVAL;
+        event.key = t;
+        event.number = 1 + random(4);
+        InsertMinHeap(&heap, event);
+    }
+    //시뮬레이션을 수행한다.
+    while (!IsEmptyHeap(&heap)) {
+        event = DeleteMinHeap(&heap);
+        process_event(&heap, event);
+    }
+    printf("전체 순이익은 =%f입니다.\n", profit);
 #endif
 
     return 0;

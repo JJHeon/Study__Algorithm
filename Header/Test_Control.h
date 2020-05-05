@@ -13,7 +13,6 @@ ToInteger.c
 */
 #define ___ERATOSTENES 0
 #define ___FACTORIAL 0
-#define ___INVOLUTION_OR_POWER 0
 #define ___FIBONACCI_NUMBERS 0
 #define ___HANOI_TOWER 0
 #define ___POLYNOMIAL_EXPRESSION1 0
@@ -34,6 +33,10 @@ ToInteger.c
 #define ___BINARY_TREE 0
 #define ___THREAD_BINARY_TREE 0
 #define ___BINARY_SEARCH_TREE 0
-#define ___HEAP 0
 #define ___ToInteger 0
+#define ___HEAP 0
+#define ___HEAP_EXAMPLE 0
+
+#define ___INVOLUTION_OR_POWER (___ToInteger || ___HEAP || ___HEAP_EXAMPLE || 0)
+
 #endif

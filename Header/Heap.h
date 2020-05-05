@@ -8,7 +8,7 @@ CAUTION:
 
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <stdbool.h>
 #define MAX_HEEP_SIZE 200
 typedef struct {
     int key;
@@ -23,7 +23,11 @@ Node_ CreateNode(int key);
 void InsertMaxHeap(Heap_* obj, Node_ item);
 Node_ DeleteMaxHeap(Heap_* obj);
 
-void PrintHeap(Heap_* obj);
+void InsertMinHeap(Heap_* obj, Node_ item);
+Node_ DeleteMinHeap(Heap_* obj);
 
-void SortHeap(Node_ obj[], int obj_size);
+void PrintHeap(Heap_* obj);
+bool IsEmptyHeap(Heap_* obj);
+
+void SortAscendingInMaxHeap(Node_ obj[], int obj_size);
 #endif
