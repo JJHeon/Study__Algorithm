@@ -696,6 +696,33 @@ int main(int argc, char *argv[]) {
     }
     printf("전체 순이익은 =%f입니다.\n", profit);
 #endif
+#if ___SELECTION_SORT
+#include "Selection_Sort.h"
+    LineMaker();
+    printf("Selection_Sort\n");
 
+    InitGenerateRandomNumber();
+    RecordType_ sample1[50];
+    //랜덤숫자열 생성
+    for (int i = 0; i < 50; i++)
+        sample1[i].key = GenerateRandomNumber(100);
+    
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 0; i < 50; i++){
+        printf("%2d ", sample1[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    SortSelectionInAscendingOrder(sample1, sizeof(sample1) / sizeof(RecordType_));
+    
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 0; i < 50; i++){
+        printf("%2d ", sample1[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+#endif
     return 0;
 }
