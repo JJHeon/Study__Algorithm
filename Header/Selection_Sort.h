@@ -1,5 +1,8 @@
 #ifndef __SELECTION_SORT_H_
 #define __SELECTION_SORT_H_
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct RecordType_ {
     int key;

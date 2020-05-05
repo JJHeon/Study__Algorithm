@@ -778,6 +778,32 @@ int main(int argc, char *argv[]) {
     }
 
 #endif
-#if 
+#if ___QUICK_SORT
+#include "Quick_Sort.h"
+    LineMaker();
+    printf("Quick Sort\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample4[50];
+    sample4[0].key = -1; //"Quick_Sort.h" CAUTION 참고.
+    //랜덤숫자열 생성
+    for (int i = 1; i < 50; i++)
+        sample4[i].key = GenerateRandomNumber(100);
+
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample4[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    QuickSortInAscendingOrder(sample4,1,50);
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample4[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
+
     return 0;
 }
