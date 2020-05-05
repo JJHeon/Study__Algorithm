@@ -36,7 +36,8 @@ ToInteger.c
 #define ___ToInteger 0
 #define ___HEAP 0
 #define ___HEAP_EXAMPLE 0
-#define ___SELECTION_SORT 1
+#define ___SELECTION_SORT 0
+#define ___INSERTION_SORT 0
 
 #define ___INVOLUTION_OR_POWER (___ToInteger || ___HEAP || ___HEAP_EXAMPLE || 0)
 

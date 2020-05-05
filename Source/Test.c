@@ -17,7 +17,6 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
-
 #if ___ERATOSTENES
 #include "Eratos.h"
     //Eratostenes
@@ -706,20 +705,48 @@ int main(int argc, char *argv[]) {
     //랜덤숫자열 생성
     for (int i = 0; i < 50; i++)
         sample1[i].key = GenerateRandomNumber(100);
-    
+
     //랜덤숫자열 출력
     printf("정렬전\n");
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < 50; i++) {
         printf("%2d ", sample1[i].key);
         if (i % 10 == 9) printf("\n");
     }
     //정렬
     SortSelectionInAscendingOrder(sample1, sizeof(sample1) / sizeof(RecordType_));
-    
+
     //랜덤숫자열 출력
     printf("정렬후\n");
-    for (int i = 0; i < 50; i++){
+    for (int i = 0; i < 50; i++) {
         printf("%2d ", sample1[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+#endif
+#if ___INSERTION_SORT
+#include "Insertion_Sort.h"
+    LineMaker();
+    printf("Insertion_Sort\n");
+
+    InitGenerateRandomNumber();
+    RecordType_ sample2[50];
+    //랜덤숫자열 생성
+    for (int i = 0; i < 50; i++)
+        sample2[i].key = GenerateRandomNumber(100);
+
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample2[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    SortInsertionInAscendingOrder(sample2, sizeof(sample2) / sizeof(RecordType_));
+
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample2[i].key);
         if (i % 10 == 9) printf("\n");
     }
 
