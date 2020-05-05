@@ -1,3 +1,6 @@
+#include "Test_Control.h"
+#if ___ToInteger
+
 #include "Power.h"
 #include "ToInteger.h"
 #include <stdio.h>
@@ -24,3 +27,4 @@ int ToIntegerFromCharArr(char* string, int from, int to) {
     }
     return result;
 }
+#endif
