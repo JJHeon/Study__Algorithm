@@ -17,7 +17,7 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
-    srand((unsigned int)time(NULL));
+
 #if ___ERATOSTENES
 #include "Eratos.h"
     //Eratostenes
@@ -659,10 +659,11 @@ int main(int argc, char *argv[]) {
 
     printf("Sorting Test\n");
     Node_ A[50];
+    InitGenerateRandomNumber();
     for (int i = 0; i < 50; i++) {
         A[i].key = (rand() % 100) + 1;
     }
-    SortHeap(A, sizeof(A) / sizeof(Node_));
+    SortAscendingInMaxHeap(A, sizeof(A) / sizeof(Node_));
     for (int i = 0; i < 50; i++) {
         if (i % 10 == 0)
             printf("\n");
@@ -679,6 +680,7 @@ int main(int argc, char *argv[]) {
     unsigned int t = 0;
 
     InitHeap(&heap);
+    InitGenerateRandomNumber();
     //처음에 몇개의 초기 이벤트를 생성시킨다.
     while (t < 5) {
         t += random(6);
