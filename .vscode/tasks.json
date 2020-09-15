@@ -6,18 +6,17 @@
         {
             "type": "shell",
             "label": "gcc.exe build active file",
-            "command": "C:/Mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
+            "command": "C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin/gcc.exe",
             "args": [
                 "-I",
-                "${workspaceFolder}\\Header",               
+                "${workspaceFolder}\\Header",
                 "-g",
                 "${workspaceFolder}\\Source\\*.c",
                 "-o",
                 "${workspaceFolder}\\Test.exe",
-
             ],
             "options": {
-                "cwd": "C:/Mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin"
+                "cwd": "C:/Program Files/mingw-w64/x86_64-8.1.0-win32-seh-rt_v6-rev0/mingw64/bin"
             },
             "problemMatcher": [
                 "$gcc"

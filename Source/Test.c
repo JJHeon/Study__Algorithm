@@ -778,6 +778,59 @@ int main(int argc, char *argv[]) {
     }
 
 #endif
+#if ___SHELL_SORT
+#include "Shell_Sort.h"
+    LineMaker();
+    printf("Shell_Sort Version 1\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample1[51];
+    //랜덤숫자열 생성 CAUTION: 1부터 해야함 1 ~ 50 사용
+    for (int i = 1; i <= 50; i++)
+        sample1[i].key = GenerateRandomNumber(100);
+
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 1; i <= 50; i++) {
+        printf("%2d ", sample1[i].key);
+        if (i % 10 == 0) printf("\n");
+    }
+    //정렬
+    Sort__ShellInAscendingOrder__V1(sample1, sizeof(sample1) / sizeof(RecordType_) - 1);  //50개만 넣어줘야함
+
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 1; i <= 50; i++) {
+        printf("%2d ", sample1[i].key);
+        if (i % 10 == 0) printf("\n");
+    }
+
+    LineMaker();
+    printf("Shell_Sort Version 2\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample2[50];
+    //랜덤숫자열 생성 CAUTION: 0부터 해야함 0 ~ 49 사용
+    for (int i = 0; i < 50; i++)
+        sample2[i].key = GenerateRandomNumber(100);
+
+    //랜덤숫자열 출력
+    printf("정렬전\n");
+    for (int i = 0; i < 50; i++) {
+
+
+        printf("%2d ", sample2[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    Sort__ShellInAscendingOrder__V2(sample2, sizeof(sample2) / sizeof(RecordType_));
+
+    //랜덤숫자열 출력
+    printf("정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample2[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+#endif
 #if ___QUICK_SORT
 #include "Quick_Sort.h"
     LineMaker();
@@ -788,10 +841,6 @@ int main(int argc, char *argv[]) {
     //랜덤숫자열 생성
     for (int i = 1; i < 50; i++)
         sample4[i].key = GenerateRandomNumber(100);
-
-    //랜덤숫자열 출력
-    printf("정렬전\n");
-    for (int i = 0; i < 50; i++) {
         printf("%2d ", sample4[i].key);
         if (i % 10 == 9) printf("\n");
     }
@@ -804,6 +853,5 @@ int main(int argc, char *argv[]) {
         if (i % 10 == 9) printf("\n");
     }
 #endif
-
     return 0;
 }
