@@ -839,7 +839,7 @@ int main(int argc, char *argv[]) {
     RecordType_ sample4[50];
     sample4[0].key = -1; //"Quick_Sort.h" CAUTION 참고.
     //랜덤숫자열 생성
-    for (int i = 1; i < 50; i++)
+    for (int i = 1; i < 50; i++){
         sample4[i].key = GenerateRandomNumber(100);
         printf("%2d ", sample4[i].key);
         if (i % 10 == 9) printf("\n");
