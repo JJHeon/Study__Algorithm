@@ -25,4 +25,10 @@ CAUTION: RANGE_MAX 의 범위 32767 까지.
 */
 int GenerateRandomNumber(int range_max);
 
+
+/*
+NOTE: GeneraterandomNumber 응용
+CAUTION: 메모리 해제 필요
+*/
+int* GenerateRandomNumber__NoOverlap(int numbers, int range_max);
 #endif

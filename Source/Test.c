@@ -17,6 +17,28 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
+    
+#if 0
+    LineMaker();
+    printf("RandomNumber Generater Test\n");
+    InitGenerateRandomNumber();
+    //Test GenerateRandomNumber__NoOverlap
+
+    InitGenerateRandomNumber();
+    int *test = GenerateRandomNumber__NoOverlap(50, 100); //0~49
+    test[0] = -1;
+
+
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", test[i]);
+        if (i % 10 == 9) printf("\n");
+    }
+    free(test);
+
+#endif
+
+
+
 #if ___ERATOSTENES
 #include "Eratos.h"
     //Eratostenes
@@ -853,5 +875,6 @@ int main(int argc, char *argv[]) {
         if (i % 10 == 9) printf("\n");
     }
 #endif
+
     return 0;
 }
