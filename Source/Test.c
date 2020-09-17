@@ -17,7 +17,7 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
-    
+
 #if 0
     LineMaker();
     printf("RandomNumber Generater Test\n");
@@ -837,8 +837,6 @@ int main(int argc, char *argv[]) {
     //랜덤숫자열 출력
     printf("정렬전\n");
     for (int i = 0; i < 50; i++) {
-
-
         printf("%2d ", sample2[i].key);
         if (i % 10 == 9) printf("\n");
     }
@@ -856,24 +854,70 @@ int main(int argc, char *argv[]) {
 #if ___QUICK_SORT
 #include "Quick_Sort.h"
     LineMaker();
-    printf("Quick Sort\n");
+    printf("Quick Sort 기본\n");
     InitGenerateRandomNumber();
-    RecordType_ sample4[50];
-    sample4[0].key = -1; //"Quick_Sort.h" CAUTION 참고.
+    RecordType_ sample4[51];
+    sample4[0].key = -1;  //"Quick_Sort.h" CAUTION 참고.
     //랜덤숫자열 생성
-    for (int i = 1; i < 50; i++){
+    for (int i = 1; i < 51; i++) {
         sample4[i].key = GenerateRandomNumber(100);
         printf("%2d ", sample4[i].key);
         if (i % 10 == 9) printf("\n");
     }
     //정렬
-    QuickSortInAscendingOrder(sample4,1,50);
+    QuickSortInAscendingOrder(sample4, 1, 50);
     //랜덤숫자열 출력
-    printf("정렬후\n");
-    for (int i = 0; i < 50; i++) {
+    printf("\n정렬후\n");
+    for (int i = 0; i < 51; i++) {
         printf("%2d ", sample4[i].key);
         if (i % 10 == 9) printf("\n");
     }
+
+    LineMaker();
+    printf("Quick Sort Improve Using 작은 부분 화일 M\n");
+    
+    RecordType_ sample5[51];
+    sample5[0].key = -1;  //"Quick_Sort.h" CAUTION 참고.
+
+    int *temp = GenerateRandomNumber__NoOverlap(50, 100);
+    //랜덤숫자열 생성
+    for (int i = 1; i < 51; i++) {
+        sample5[i].key = temp[i - 1];
+        printf("%2d ", sample5[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    free(temp);
+    //정렬
+    QuickSortInAscendingOrder__ImproveUsingInsertion(sample5, 1, 50, 20);
+    
+    //랜덤숫자열 출력
+    printf("\n정렬후\n");
+    for (int i = 0; i < 51; i++) {
+        printf("%2d ", sample5[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+    LineMaker();
+    printf("Quick Sort Improve Using 중간값 분할 M\n");
+    
+    RecordType_ sample6[51];
+    sample6[0].key = -1;  //"Quick_Sort.h" CAUTION 참고.
+    //랜덤숫자열 생성
+    for (int i = 1; i < 51; i++) {
+        sample6[i].key = GenerateRandomNumber(100);
+        printf("%2d ", sample6[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    QuickSortInAscendingOrder__ImproveUsingSplitInMiddleValue(sample6, 1, 50);
+    //랜덤숫자열 출력
+    printf("\n정렬후\n");
+    for (int i = 0; i < 51; i++) {
+        printf("%2d ", sample6[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+
 #endif
 
     return 0;

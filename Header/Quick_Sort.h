@@ -8,6 +8,7 @@
 typedef struct RecordType_ {
     int key;
 } RecordType_;
+
 /*
 자료 구조가 배열에 대한 퀵정렬
 CAUTION:
@@ -38,8 +39,33 @@ int Partition2InAscendingOrder(RecordType_* array, int left, int right){
 
 만약 위 코드를 사용하고 싶다면 QuickSortInAscendingOrder() 내부에 호출되는 Partition 함수를 바꿔 사용하면 된다.
 */
-//int Partition2InAscendingOrder(RecordType_* array, int left, int right);
-int PartitionInAscendingOrder(RecordType_* array, int left, int right);
 void QuickSortInAscendingOrder(RecordType_* array, int left, int right);
+//int Partition2InAscendingOrder(RecordType_* array, int left, int right);
 
+/*
+NOTE: 개선방법1-순환 제거
+
+스택 자료구조를 사용한 순환 제거 방법은 여기서 사용하지 않겠음
+*/
+
+/*
+NOTE: 개선방법2-작은 부분 화일
+부분파일의 크기가 일정 크기 이하로 작아지면 삽입정렬 수행
+
+M : 5 ~ 25 - 많은 응용에서 약 20% 정도 시간 절감 효과가 있음
+*/
+void QuickSortInAscendingOrder__ImproveUsingInsertion(RecordType_* array, int left, int right, int M_Param);
+
+/*
+NOTE: 개선방법3-중간 값 분할
+pivot 선택할때 정렬하려는 Array의 가장 중간값을 사용하면 최악의 경우를 피할 수 있게됨을 이용
+최악의 경우 발생 확률을 낮추는 것.
+
+CAUTION: 사용금지
+
+본래 의도대로 짜여지지 않음, 공부한 PPT대로 구성하면 정렬이 제대로 이루어지지 않는다. 따라서 문제가 됨
+추후 더 공부해 보충이 필요
+
+*/
+void QuickSortInAscendingOrder__ImproveUsingSplitInMiddleValue(RecordType_* array, int left, int right);
 #endif
