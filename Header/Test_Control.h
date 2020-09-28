@@ -39,8 +39,9 @@ ToInteger.c
 #define ___SELECTION_SORT 0
 #define ___INSERTION_SORT 0
 #define ___BUBBLE_SORT 0
-#define ___QUICK_SORT 1
+#define ___QUICK_SORT 0
 #define ___SHELL_SORT 0
+#define ___MERGE_SORT 0
 
 #define ___INVOLUTION_OR_POWER (___ToInteger || ___HEAP || ___HEAP_EXAMPLE || 0)
 

@@ -17,7 +17,6 @@ void LineMaker(void) {
 }
 
 int main(int argc, char *argv[]) {
-
 #if 0
     LineMaker();
     printf("RandomNumber Generater Test\n");
@@ -36,8 +35,6 @@ int main(int argc, char *argv[]) {
     free(test);
 
 #endif
-
-
 
 #if ___ERATOSTENES
 #include "Eratos.h"
@@ -875,7 +872,7 @@ int main(int argc, char *argv[]) {
 
     LineMaker();
     printf("Quick Sort Improve Using 작은 부분 화일 M\n");
-    
+
     RecordType_ sample5[51];
     sample5[0].key = -1;  //"Quick_Sort.h" CAUTION 참고.
 
@@ -889,7 +886,7 @@ int main(int argc, char *argv[]) {
     free(temp);
     //정렬
     QuickSortInAscendingOrder__ImproveUsingInsertion(sample5, 1, 50, 20);
-    
+
     //랜덤숫자열 출력
     printf("\n정렬후\n");
     for (int i = 0; i < 51; i++) {
@@ -899,7 +896,7 @@ int main(int argc, char *argv[]) {
 
     LineMaker();
     printf("Quick Sort Improve Using 중간값 분할 M\n");
-    
+
     RecordType_ sample6[51];
     sample6[0].key = -1;  //"Quick_Sort.h" CAUTION 참고.
     //랜덤숫자열 생성
@@ -916,9 +913,27 @@ int main(int argc, char *argv[]) {
         printf("%2d ", sample6[i].key);
         if (i % 10 == 9) printf("\n");
     }
-
-
 #endif
-
+#if ___MERGE_SORT
+#include "Merge_Sort.h"
+    LineMaker();
+    printf("Merge Sort 기본\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample7[50];
+    //랜덤숫자열 생성
+    for (int i = 0; i < 50; i++) {
+        sample7[i].key = GenerateRandomNumber(100);
+        printf("%2d ", sample7[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    //정렬
+    SortMergeInAscendingOrder(sample7, 0, 49);
+    //랜덤숫자열 출력
+    printf("\n정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample7[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
     return 0;
 }
