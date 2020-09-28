@@ -935,5 +935,36 @@ int main(int argc, char *argv[]) {
         if (i % 10 == 9) printf("\n");
     }
 #endif
+
+#if ___COUNTING_SORT
+#include "Counting_Sort.h"
+    LineMaker();
+    printf("Counting_Sort 기본\n");
+    InitGenerateRandomNumber();
+    RecordType_ sample8[50];
+    sample8[0].key = -1;
+    //랜덤숫자열 생성
+    for (int i = 0; i < 50; i++) {
+        if (i == 0){
+            printf("-1 ");
+            continue;
+        }
+        sample8[i].key = GenerateRandomNumber(100);
+        printf("%2d ", sample8[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+    
+
+    //정렬
+    SortCountingInAscendingOrder(sample8, 49, 100);//CAUTION: HEADER 참고, 배열의 0번지는 이용할 수 없음.
+    //랜덤숫자열 출력
+    printf("\n정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample8[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
+
     return 0;
 }
