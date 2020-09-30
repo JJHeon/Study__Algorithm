@@ -7,7 +7,7 @@ ON : 1
 OFF: 0
 
 CAUTION:
-Math.c
+Math_Custom.c
 ToInteger.c
 적용되지 않음.
 */

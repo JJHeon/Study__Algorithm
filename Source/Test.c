@@ -1,4 +1,5 @@
 #include "Test_Control.h"
+#include "Math_Custom.h"
 //std
 #include <math.h>
 #include <stdbool.h>
@@ -945,7 +946,7 @@ int main(int argc, char *argv[]) {
     sample8[0].key = -1;
     //랜덤숫자열 생성
     for (int i = 0; i < 50; i++) {
-        if (i == 0){
+        if (i == 0) {
             printf("-1 ");
             continue;
         }
@@ -954,10 +955,8 @@ int main(int argc, char *argv[]) {
         if (i % 10 == 9) printf("\n");
     }
 
-    
-
     //정렬
-    SortCountingInAscendingOrder(sample8, 49, 100);//CAUTION: HEADER 참고, 배열의 0번지는 이용할 수 없음.
+    SortCountingInAscendingOrder(sample8, 49, 100);  //CAUTION: HEADER 참고, 배열의 0번지는 이용할 수 없음.
     //랜덤숫자열 출력
     printf("\n정렬후\n");
     for (int i = 0; i < 50; i++) {
