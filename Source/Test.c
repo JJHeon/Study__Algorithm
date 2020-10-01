@@ -965,7 +965,7 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
-#if ___RADIX_SORT
+#if ___RADIX_SORT && 0
 #include "Radix_Sort.h"
     LineMaker();
     printf("Radix_Sort\n");
@@ -989,5 +989,35 @@ int main(int argc, char *argv[]) {
     }
 #endif
 
+#if ___SEQUENTIAL_SEARCHING
+#include "Radix_Sort.h"
+#include "Sequential_Searching.h"
+
+    LineMaker();
+    printf("Sequential_Searching\n");
+    InitGenerateRandomNumber();
+
+    RecordType_ sample10[50];
+    int *random_number1 = GenerateRandomNumber__NoOverlap(50, 100);
+    for (int i = 0; i < 50; i++) {
+        sample10[i].key = random_number1[i];
+        printf("%2d ", sample10[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    free(random_number1);
+
+    //순차 탐색은 사전에 정렬되어 있지 않아도 된다.
+    //SortRadixInAscendingOrder(sample10, 50, 3);
+
+    //탐색 Find 74
+    printf("\nSearching result : %d - %d\n", 74, SearchSequential(sample10, 50, 74));
+
+    //랜덤숫자열 출력
+    printf("\n탐색후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample10[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
     return 0;
 }

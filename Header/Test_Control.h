@@ -11,6 +11,11 @@ Math_Custom.c
 ToInteger.c
 적용되지 않음.
 */
+#define ___SEQUENTIAL_SEARCHING 0
+
+/* SEARCHING 위한 RADIX SORT 사용 */
+#define ___RADIX_SORT (___SEQUENTIAL_SEARCHING)
+
 #define ___ERATOSTENES 0
 #define ___FACTORIAL 0
 #define ___FIBONACCI_NUMBERS 0
@@ -43,7 +48,6 @@ ToInteger.c
 #define ___SHELL_SORT 0
 #define ___MERGE_SORT 0
 #define ___COUNTING_SORT 0
-#define ___RADIX_SORT 0
 
 #define ___INVOLUTION_OR_POWER (___ToInteger || ___HEAP || ___HEAP_EXAMPLE || 0)
 
