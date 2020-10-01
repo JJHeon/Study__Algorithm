@@ -1,5 +1,5 @@
-#include "Test_Control.h"
 #include "Math_Custom.h"
+#include "Test_Control.h"
 //std
 #include <math.h>
 #include <stdbool.h>
@@ -961,6 +961,30 @@ int main(int argc, char *argv[]) {
     printf("\n정렬후\n");
     for (int i = 0; i < 50; i++) {
         printf("%2d ", sample8[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
+
+#if ___RADIX_SORT
+#include "Radix_Sort.h"
+    LineMaker();
+    printf("Radix_Sort\n");
+    InitGenerateRandomNumber();
+
+    RecordType_ sample9[50];
+    for (int i = 0; i < 50; i++) {
+        sample9[i].key = GenerateRandomNumber(100);
+        printf("%2d ", sample9[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+
+    //정렬
+    SortRadixInAscendingOrder(sample9, 50, 3);
+
+    //랜덤숫자열 출력
+    printf("\n정렬후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample9[i].key);
         if (i % 10 == 9) printf("\n");
     }
 #endif

@@ -43,6 +43,7 @@ ToInteger.c
 #define ___SHELL_SORT 0
 #define ___MERGE_SORT 0
 #define ___COUNTING_SORT 0
+#define ___RADIX_SORT 0
 
 #define ___INVOLUTION_OR_POWER (___ToInteger || ___HEAP || ___HEAP_EXAMPLE || 0)
 
