@@ -1019,5 +1019,36 @@ int main(int argc, char *argv[]) {
         if (i % 10 == 9) printf("\n");
     }
 #endif
+
+#if ___BINARY_SEARCH
+#include "Binary_Search.h"
+#include "Radix_Sort.h"
+
+    LineMaker();
+    printf("Binary_Search\n");
+    InitGenerateRandomNumber();
+
+    RecordType_ sample11[50];
+    int *random_number1 = GenerateRandomNumber__NoOverlap(50, 100);
+    for (int i = 0; i < 50; i++) {
+        sample11[i].key = random_number1[i];
+        printf("%2d ", sample11[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+    free(random_number1);
+
+    //이진 탐색은 사전에 정렬되어 있어야함
+    SortRadixInAscendingOrder(sample11, 50, 3);
+
+    //탐색 Find 74
+    printf("\nSearching result : %d - %d\n", 43, SearchBinary(sample11, 0, 49, 43));
+
+    //랜덤숫자열 출력
+    printf("\n탐색후\n");
+    for (int i = 0; i < 50; i++) {
+        printf("%2d ", sample11[i].key);
+        if (i % 10 == 9) printf("\n");
+    }
+#endif
     return 0;
 }

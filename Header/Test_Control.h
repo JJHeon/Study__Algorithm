@@ -12,9 +12,10 @@ ToInteger.c
 적용되지 않음.
 */
 #define ___SEQUENTIAL_SEARCHING 0
+#define ___BINARY_SEARCH 0
 
 /* SEARCHING 위한 RADIX SORT 사용 */
-#define ___RADIX_SORT (___SEQUENTIAL_SEARCHING)
+#define ___RADIX_SORT (___SEQUENTIAL_SEARCHING || ___BINARY_SEARCH)
 
 #define ___ERATOSTENES 0
 #define ___FACTORIAL 0
