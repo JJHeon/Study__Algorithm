@@ -13,6 +13,7 @@ ToInteger.c
 */
 #define ___SEQUENTIAL_SEARCHING 0
 #define ___BINARY_SEARCH 0
+#define ___234_TREE 1
 
 /* SEARCHING 위한 RADIX SORT 사용 */
 #define ___RADIX_SORT (___SEQUENTIAL_SEARCHING || ___BINARY_SEARCH)
